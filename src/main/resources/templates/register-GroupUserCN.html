@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{layout/main-layout1}" >
+    <head>
+    <meta charset="ISO-8859-1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+          <link rel="stylesheet" type="text/css" href="../../css/layout.css" />
+        <title>Register ChucNangNV</title>
+    </head>
+    <body>
+      <article layout:fragment="content" >
+        <div class="container" style="margin-top: 10px;">
+            <div class="row" style="border: 1px darkgrey solid; border-radius: 10px;width: 50%; margin: 0 50px; padding: 20px;" >
+                <div class="col-sm-12">
+        <h2>Register GroupUserCN</h2>
+         
+          <form th:action="${action}"  th:object=${GroupUserCN} method="post" >
+            <div class="form-group">
+                      
+                            <label>Id</label>
+                            <input type="hidden"  th:field="*{id}" class="form-control" name="id" value="" placeholder="Enter id">
+                        </div>
+                        
+                       
+                        <div class="form-group">
+                            <label>id chucnang </label>
+                             <input type="number"  th:field="*{idcn}" class="form-control" name="idcn" value="" placeholder="Enter idcn">
+                        </div>
+							 <div class="form-group">
+                            <label>id groupuser</label>
+                             <input type="number"  th:field="*{idgroupuser}" class="form-control" name="idgroupuser" value="" placeholder="Enter iduser">
+                        </div>
+                        
+					
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-danger btn-sm">Cancel</button>
+                        <a href="/GroupUserCN/page" class="btn btn-primary">Display GroupUserCN</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </article>
+    </body>
+</html>

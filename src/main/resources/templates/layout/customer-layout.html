@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../css/layout1.css" />
+    </head>
+     <body>
+ 
+        <div id="wrapper">
+            <header >
+              <form action="/cuahang/timgi">
+        <input  class="form-control1" type="text" onkeyup=""
+        	 onkeypress="enter"  name="name" placeholder="Ban tim gi..."  > 
+      
+       
+       
+        </form>  
+        <script th:inline="javascript">
+/*<![CDATA[*/
+
+    var message = /*[[${message}]]*/ 'default';
+    console.log(message);
+
+/*]]>*/
+</script>
+        <div class="demo" th:each="item1:${lis}">
+        <img alt="" th:src="@{'/getimage/'+${item.photo}}" width="20" height="10">
+       
+        <a th:text="${item.name}"></a><br>
+        <a th:text="${item.price}"></a>
+        </div> 
+              <ul>
+                    <li><a href="/cuahang/iphone">Iphone</a></li>
+                    <li><a href="/cuahang/laptop">LapTop</a></li>
+                    <li><a href="/cuahang/tablet">Tablet</a></li>
+                    <li><a href="/cuahang/samsum">Samsum</a></li>
+                    <li><a href="/cuahang/">Trangchu</a></li>
+                     </ul>
+              
+                <img alt="" width="600" height="300"   th:src="@{'/getimage/oppo.png'}"> 
+                    
+              </header>
+              
+         <div id="main-content">
+         <nav >
+         <img alt="" th:src="@{'/getimage/nav.gif'}">
+         </nav>
+       
+         <aside >
+         <div class="mm">
+       <h3>Hang san xuat</h3>
+       <div th:each="item:${USERS}">
+          <a th:href="@{'/cuahang/hangsx/'+${item.name}}"><p> <label th:text="${item.name}">SamSum</label></p></a>
+         </div>
+          </div>
+          <div class="sapxep">
+          <form action="/cuahang/sapxep">
+          <div class="form-group">
+          <select class="form-control" onchange="location=options[selectedIndex].value;
+         
+          " name="sapxep" >
+          <div th:if="${l==null}" >
+           <option value="/cuahang/">theo gia ngau nhien </option>
+           <option value="/cuahang/sapxep">theo gia tang dan </option>
+           <option  value="/cuahang/sapxep1">theo gia giam dan </option>
+          </div>
+         
+           <div th:if="${l=='0'}" >
+            <option value="/cuahang/">theo gia ngau nhien </option>
+           <option selected="selected" value="/cuahang/sapxep">theo gia tang dan </option>
+           <option  value="/cuahang/sapxep1">theo gia giam dan </option>
+          </div>
+          <div th:if="${l=='1'}" >
+           <option value="/cuahang/">theo gia ngau nhien </option>
+           <option value="/cuahang/sapxep">theo gia tang dan </option>
+           <option selected="selected" value="/cuahang/sapxep1">theo gia giam dan </option>
+          </div>
+          </select>
+           </div>
+        
+         
+          </form>
+          </div>
+         </aside>
+       <article layout:fragment="content">
+       <div  th:each="item:${list1}">
+       <a th:href="@{'/cuahang/sanpham/'+${item.id}}">
+                <div  class="sanpham">
+                    
+                    <img class="images" th:src="@{'/getimage/'+${item.photo}}" alt=""/>
+                    <h4 th:text="${item.name}"></h4>
+                    <p class="icons">Tra gop 0%</p>
+                    <label th:text="${item.price}+d"class="price">
+                        $300
+                    </label>
+                    <br>
+                    <p class="te" th:text="${item.description}"> </p>
+                   
+                   
+                </div>     
+              
+              </a>
+              </div>
+            </article>
+          
+        </div>
+         <div class="clear" ></div>
+           
+            <footer style="text-align:center;text-transform: uppercase;">Giới thiệu về công ty
+
+</footer>
+            </div>
+            
+         
+    </body>
+    </html>
+           

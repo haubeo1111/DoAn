@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{layout/main-layout1}" >
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="../../css/layout.css" />
+    </head>
+    <body>
+         <article layout:fragment="content" >
+        <div class="container">
+            <h2>List Employee</h2>
+           <!--  <a th:href="@{'/employee/'}" class="btn btn-primary">Add Users</a>-->
+          <!-- <div th:if="${success}"
+			class="row alert alert-success alert-dismissible">
+			<button type="button" class="close" data-dismiss="alert"
+				aria-label="Close">
+				<span aria-hidden="true">×</span>
+			</button>
+			<span th:text="${success}"></span>
+		</div>-->
+            	<div class="row">
+			<a th:href="@{'/employee/'}" class="btn btn-success pull-left">
+				<span class="glyphicon glyphicon-plus"></span> Add new employee
+			</a>
+			<form class="form-inline pull-right" action="#"
+				th:action="@{/employee/search}" method="GET">
+				<div class="form-group">
+					<input type="text" class="form-control" onkeydown="" id="" name="s"
+						placeholder="Type employee name..." />
+						
+				</div>
+				<button type="submit" class="btn btn-primary">Search</button>
+			</form>
+		</div>
+             <th:block th:if="${#lists.isEmpty(employees.pageList)}">
+			<h3>No employee</h3>
+		</th:block>
+
+		 <th:block th:unless="${#lists.isEmpty(employees.pageList)}">
+		<nav class="row justify-content-center wow fadeIn"
+		data-wow-delay="0.2s">
+		<div class="row">
+		<form action="/employee/xoanhieu">
+	<div class="row">	<a th:href="@{'/employee/page'}" class="btn btn-success pull-left"> List Users </a></div>
+            <table border="1"  width="945" height="auto">
+                     <caption align="top"  class="title" style="color:green;"> List Users </caption>
+                <thead>
+                    <tr>
+                    <th>count</th>
+                    <th>Photo</th>
+                    <th>id</th>
+                    
+                        <th>name</th>
+                    <th>Address</th>
+					<th>Phone</th>
+					<th>birthday</th>
+					<th>Gioitinh</th>
+					<th>Degree</th>
+					<th>manv</th>
+					<th>chucvu</th>
+					<th>Edit</th>
+					<th>Xoa</th>
+					
+					<th><button type="submit">Xoa nhieu</button></th>
+                        
+                       
+                       
+                        
+                            </tr>
+                </thead>
+                <tbody>
+                    
+                  <tr th:each="contact,iterStat : ${employees.pageList}">
+							<td th:text="${iterStat.count}"></td>
+							<td width="100" >
+					<img alt="" th:src="@{'/getimage/'+${contact.image}}" width="80" height="70"></td>
+							<td th:text="${contact.id}"></td>
+							<td th:text="${contact.name}"></td>
+							<td th:text="${contact.address}"></td>
+							<td th:text="${contact.phone}"></td>
+							<td th:text="${contact.birthday}"></td>
+						<th:block th:if="${contact.gender==0}">	<td  th:text="nam"></td></th:block>
+						<th:block th:if="${contact.gender==1}">	<td  th:text="nu"></td></th:block>
+						<th:block th:if="${contact.gender==2}">	<td  th:text="dongtinh"></td></th:block>
+							<td th:text="${contact.degree}"></td>
+								<td th:text="${contact.manv}"></td>
+								<!--<td th:text="${contact.chucvuid}"></td>
+							
+								 <td th:text="${chucvu.get(contact.chucvuid).getTencv()}"></td>-->
+									<p th:each="cv:${chucvu}"><th:block th:if="${contact.chucvuid==cv.id} "><td  th:text="${cv.tencv}" ></td> </th:block></p>
+							<td><a th:href="@{'/employee/edit/'+${contact.id}}"><span
+									class="glyphicon glyphicon-pencil"></span></a></td>
+							<td><a th:href="@{'/employee/delete/'+${contact.id}}"><span
+									class="glyphicon glyphicon-trash"></span></a></td>
+									<td><input type="checkbox" name="xoa[]" th:value="${contact.id}" ></td>
+									
+						</tr>
+					</tbody>
+				</table>
+				</form>
+			</div>
+		<ul class="pagination">
+			<li
+				th:class="${currentIndex == 1}? 'page-item disabled' : 'page-item'">
+				<a class="page-link" th:href="@{/employee/page}">First</a>
+			</li>
+			<li
+				th:class="${currentIndex == 1}? 'page-item disabled': 'page-item' ">
+				<a class="page-link" aria-label="Previous"
+				th:href="@{|${baseUrl}${currentIndex - 1}|}"
+				title='Go to previous page'><span aria-hidden="true">«</span>
+					<span class="sr-only">Previous</span></a>
+			</li>
+			<li th:each="item : ${#numbers.sequence(beginIndex,endIndex)}"
+				th:class="${item == currentIndex ? 'page-item active' :'page-item' }">
+				<a class="page-link" th:href="@{|${baseUrl}${item}|}"> <span
+					th:text='${item}'>1</span>
+			</a>
+			</li>
+			<li
+				th:class="${currentIndex == totalPageCount}? 'page-item disabled': 'page-item'">
+				<a class="page-link" aria-label="Next"
+				th:href="@{|${baseUrl}${currentIndex + 1}|}" title='Go to next page'><span
+					aria-hidden="true">»</span> <span class="sr-only">Next</span></a>
+			</li>
+			<li
+				th:class="${currentIndex == totalPageCount}? 'page-item disabled':'page-item'">
+				<a class="page-link" th:href="@{|${baseUrl}${totalPageCount}|}">Last</a>
+			</li>
+		</ul>
+	</nav>
+	<!--  <form class="form-inline pull-right" action="#"
+				th:action="@{/employee/search/pageNumber}" method="GET">
+				<div class="form-group">
+					<input type="text" class="form-control" onkeydown="" id="" name="sa"
+						placeholder="Type employee name..." />
+						
+				</div>
+				<button type="submit" class="btn btn-primary">Search</button>
+			</form>-->
+			
+		  </th:block>
+	</div>
+                    
+                  
+
+
+       
+        </article>
+    </body>
+</html>

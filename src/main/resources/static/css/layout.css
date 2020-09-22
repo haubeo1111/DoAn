@@ -1,0 +1,401 @@
+@charset "ISO-8859-1";
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 21, 2019, 2:39:20 PM
+    Author     : haubeo
+*/
+
+
+
+
+
+#wrapper{
+    width:100%;
+    height: auto;
+    background-color: cyan;
+   
+
+ 
+ 
+}
+#wangcao{
+	 background-color: green;
+    position:absolute;
+   left:0px;
+   top:0px;
+    width:auto;
+    height:auto;
+	
+}
+
+
+#wangcao1{
+	 background-color: green;
+    position:absolute;
+   right:0px;
+   top:0px;
+    width:auto;
+    height:auto;
+	
+}
+
+
+
+header{
+    width:100%;
+    height:auto; 
+    background-color:bisque;
+    position: relative;
+}
+header .logo{
+	position: absolute;
+	top:0px;
+	left:0px;
+	width: 100px;
+	height: 100px;
+}
+header input{
+	position: absolute;
+	top:0px;
+	left:150px;
+	width: 150px;
+}
+
+
+
+nav{
+    width:100%;
+    height :60px;  
+    background-color:white;
+    margin-top: 0px;
+}
+
+#main-content{
+    width: 100%;
+    height:auto;
+    background-color: green;
+}
+article{
+    width: 100%;
+    height:auto; 
+    background-color:#ffffff;
+    float: left;
+}
+table,th,td{
+    border: 1px solid pink;  
+    border-collapse: collapse; 
+    
+	
+}
+  
+ th ,td {  
+
+     padding: 10px;  
+}  
+ 
+aside{
+    width: 0%;
+    height: 100%;  
+    background-color:  aqua;
+    float: left;
+}
+#footer{
+    width: 100%;
+    height: 200px;
+    float: left;
+    background-color: red;
+    text-align: center;
+}
+.not{
+	
+	 background-color:#0000ff;
+	color:white;
+	text-align:center;
+	font-style:normal;
+	font-family:serif;
+	boder:1px;
+	weight:20px;
+	height:20px;
+	 border-top-left-radius:1px;
+       border-top-right-radius:1px;
+       border-bottom-left-radius:1px;
+        border-bottom-right-radius:1px;
+        padding:3px;
+        box-shadow:2px 2px  2px #0000ff;
+         text-transform: uppercase;
+}
+.not1{
+	
+	 background-color:red;
+	color:white;
+	text-align:center;
+	font-style:none;
+	boder:1px;
+	weight:20px;
+	height:20px;
+	 border-top-left-radius:1px;
+       border-top-right-radius:1px;
+       border-bottom-left-radius:1px;
+        border-bottom-right-radius:1px;
+        padding:3px;
+        box-shadow:1px 1px #0000ff;
+         text-transform: uppercase;
+}
+.title{
+    text-align: center;
+    color: black;
+    padding:3px 0; 
+   
+    text-transform: uppercase;
+}
+header img{
+	width: 100%;
+	height: 200px;
+}
+.col-33{
+    width: 32%;
+    height: 200px;
+    background-color:  coral;
+    border: 1px solid  gray;
+    float: left;
+    margin-left: 5px;
+    margin-bottom: 3px; 
+    margin-top: 3px;
+    border-radius: 3px;
+    box-shadow: 2px 2px gray;
+}
+.col-33 >img{
+
+    width: 190px;
+    height: 180px;
+    margin: 12px;
+}
+.clear{
+    clear:  both;
+}
+.boox-menu-top{
+    background-color: green;
+    position: absolute;
+    top: 0;
+    right:0px ;
+    width: 100px;
+    height: 100px;
+    border-bottom-left-radius: 20px;
+    z-index: 2;
+}
+.boox-menu-top-ul{
+    list-style-type: none;
+    display: inline-block;
+    margin :0;
+   
+    line-height: 60px;
+}
+.boox-menu-top -li{
+    float:left;
+    width: 100px;
+}
+.boox-menu-top -li-a{
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+.boox-menu-top -li-a:hover{
+    color:blue;
+    text-decoration: underline;
+}
+.sanpham{
+    width: 32%;
+    height:250px;
+    border:1px solid black;
+    background-color: blue;
+    box-shadow: 3px 2px antiquewhite;
+    border-radius: 10px;
+    margin:10px 3px;
+    float:left;
+    position: relative;
+}
+.sanpham h3{
+    color :red;
+    margin:5px 0;
+    text-align: center;
+    border-bottom: 1px solid black;
+
+}
+.sanpham .price{
+    font-size: 28px;
+    font-weight: 600;
+    color:orange;
+    position: absolute;
+    left:5px;
+    bottom: 15px;
+}
+.sanpham .icons{
+    width: 25px;
+    height: 80px;
+    right:5px;
+    bottom: 5px;
+    position: absolute;
+}
+.sanpham .images{
+    width: 200px;
+    height:200px;
+}
+
+.sanpham .new-img{
+
+    position: absolute;
+    right: 0px;
+    top:0px;
+}
+.sanpham .new-img img{
+    width: 85px;
+}
+nav > ul{
+    list-style-type: none;
+    text-align: center;
+    padding:  0;
+ 
+    width: 100%;
+    height:60px;
+   margin-top:-3px;
+    
+}
+nav > ul > li{
+    display: inline-block;
+  background-color:green;
+    width: 16%;
+     line-height:50px;
+      border-top-left-radius:10px;
+       border-top-right-radius:10px;
+       border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px;
+}
+nav > ul > li >a{
+  color:  red;
+    text-decoration: none;
+}
+nav > ul > li >a:hover{
+  background-color:  blanchedalmond;
+
+}
+header > ul{
+    list-style-type: none;
+    text-align: center;
+    padding:  0;
+ position:absolute;
+    width: 80%;
+    height:60px;
+   margin-top:-3px;
+   top:0px;
+   left:300px;
+    
+}
+header > ul > li{
+    display: inline-block;
+  background-color:green;
+    width: 16%;
+     line-height:50px;
+      border-top-left-radius:10px;
+       border-top-right-radius:10px;
+       border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px;
+}
+header > ul > li >a{
+  color:  red;
+    text-decoration: none;
+}
+header > ul > li >a:hover{
+  background-color:  blanchedalmond;
+
+}
+#vmenu{
+   border :1px solid gray;
+ padding:10px;
+ box-shadow: 3px 2px gray;
+    margin: 3px;
+}
+#vmenu ul{
+    list-style-type: none;
+    padding: 0; 
+}
+#vmenu > ul >li{
+    line-height: 30px;
+    border-bottom: 1px  dotted azure;
+    padding: 0; 
+}
+#vmenu > ul >li a{
+    font-size: 12px;
+    text-decoration: none;
+    line-height: 15px;
+    background: url(../images/Add.png) no-repeat ;
+    padding: 5px 5px 8px 30px;
+    
+}
+#vmenu > ul >li a:hover{
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 20px;
+    background: url(../images/Add.png)  no-repeat  ;
+    padding: 5px 5px 8px 30px;
+    
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 12, 2019, 2:50:07 PM
+    Author     : haubeo
+*/
+.form-control1{
+    padding:5px;
+    margin:3px 0;
+    width: 150px;
+    border-radius: 3px;
+    border:none;
+    box-shadow: 0 0 3px aquamarine;
+    color : coral;
+    display: block;
+    outline :none;
+    
+}
+.form-control1:focus{
+    box-shadow: 0 0 3px blue; 
+} 
+.form-group1{
+  margin :10px 20 px;
+  font-size: 20px;
+}
+.btn{
+    padding:5px;
+    border-radius: 3px;
+    border:1px solid activecaption;
+    color: azure;
+    background-color:  blue;
+}
+.btnd{
+    padding:5px;
+    border-radius: 3px;
+    border:1px solid activecaption;
+    color: azure;
+    background-color:red;
+}
+.ll{
+   border: 2px solid aliceblue;
+  margin: 10px 300px 50px 300px;
+  padding: 30px;
+  border-radius: 10px;
+}
+.gh{
+    width: 500px;
+    height: 100px;
+    border: 1px solid activecaption;
+    
+}
+

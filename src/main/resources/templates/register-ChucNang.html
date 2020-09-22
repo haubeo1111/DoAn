@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{layout/main-layout1}" >
+    <head>
+    <meta charset="ISO-8859-1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+          <link rel="stylesheet" type="text/css" href="../../css/layout.css" />
+        <title>Register ChucNangNV</title>
+    </head>
+    <body>
+      <article layout:fragment="content" >
+        <div class="container" style="margin-top: 10px;">
+            <div class="row" style="border: 1px darkgrey solid; border-radius: 10px;width: 50%; margin: 0 50px; padding: 20px;" >
+                <div class="col-sm-12">
+        <h2>Register ChucNangNV</h2>
+         
+          <form th:action="${action}"  th:object=${ChucNang} method="post" >
+            <div class="form-group">
+                      
+                            <label>Id</label>
+                            <input type="hidden"  th:field="*{id}" class="form-control" name="id" value="" placeholder="Enter id">
+                        </div>
+                        
+                       
+                        <div class="form-group">
+                            <label>ten chucnang </label>
+                             <input type="text"  th:field="*{tencn}" class="form-control" name="tencn" value="" placeholder="Enter tencn">
+                        </div>
+							 <div class="form-group">
+                            <label>ma chucnang</label>
+                             <input type="text"  th:field="*{macn}" class="form-control" name="macn" value="" placeholder="Enter macn">
+                        </div>
+                         <div class="form-group">
+                            <label>chucnang url</label>
+                             <input type="text"  th:field="*{cnurl}" class="form-control" name="cnurl" value="" placeholder="Enter cnurl">
+                        </div>
+                         <div class="form-group">
+                            <label>mota chucnang</label>
+                             <input type="text"  th:field="*{mota}" class="form-control" name="mota" value="" placeholder="Enter mota">
+                        </div>
+                         <div class="form-group">
+                            <label>ma api</label>
+                             <input type="text"  th:field="*{maapi}" class="form-control" name="maapi" value="" placeholder="Enter maapi">
+                        </div>
+                         
+                         <div class="form-group">
+                            <label>congkhai</label>
+                            <div class="radio"><!--value = 1 => Nam| 0 =>Nu -->
+                                <label class="checkbox-inline"><input type="radio"  th:field="*{congkhai}" name="congkhai"  value=1 checked >co</label>
+                                <label class="checkbox-inline"><input type="radio"  th:field="*{congkhai}" name="congkhai"  value=0>khong</label>
+                        </div>
+                        </div>
+                         <div class="form-group">
+                            <label>chucnang cha</label>
+                           <select th:field="*{cncha}" class="form-control" id="categorieid" name="cncha">
+							<option  th:each="depart:${chucnangcha}" th:value="${depart.id}" th:text="${depart.tencn}"></option>
+							
+						</select>
+                        </div>
+					
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-danger btn-sm">Cancel</button>
+                        <a href="/ChucNang/page" class="btn btn-primary">Display ChucNang</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </article>
+    </body>
+</html>

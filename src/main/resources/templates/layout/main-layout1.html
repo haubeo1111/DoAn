@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../css/layout.css" />
+    </head>
+    <body>
+ 
+        <div id="wrapper">
+            <header >
+                <img  th:src="@{'/getimage/anh.jpg'}"  alt=""/>
+                <div class="boox-menu-top">
+                  <ul><li><a href="/DangKy/">dang ky</a></li>
+                    <li><a href="/user/logout">Logout</a></li>
+                   
+                    </ul> 
+                </div>
+               </header>
+            <nav>
+               <ul>
+                    <li><a href="/dienthoai/">Products</a></li>
+                    <li><a href="/HDChiTiet/">HD chitiet</a></li>
+                    <li><a href="/hoadon/">Hoa Don</a></li>
+                    <li><a href="/employee/">Cartsdetails</a></li>
+                    <li><a href="/UserChucNang/">Users</a></li>
+                     <li><a href="/customer/">Customers</a></li>
+                    
+                </ul>
+            </nav>
+            <div id="main-content">
+       <article layout:fragment="content">
+           
+                <h1 class="title">Cua Hang Dien Thoai</h1>
+                <div class="sanpham">
+                    <h3></h3>samsum
+                    <img class="images"  src="../../uploads/anh1.jpg" alt=""/>
+                    <label class="price">
+                        $300
+                    </label>
+                    <div class="icons">
+                        <img src="images/Add to basket.png" alt=""/>
+                        <img src="images/Call.png" alt=""/>
+                        <img src="images/Date.png" alt=""/>
+                    </div>
+                    <div class="new-img">
+                        <img src="images/new_icon.png" alt=""/>
+                    </div>
+                </div>     
+                <div class="sanpham"></div>
+                     <div class="sanpham"></div>  
+                
+            </article>
+           </div>
+        
+            <div class="clear" ></div>
+            <footer style="text-align:center;text-transform: uppercase;">Giới thiệu về công ty
+
+</footer>
+            </div>
+            
+         
+    </body>
+</html>

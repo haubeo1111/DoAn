@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{layout/main-layout1}" >
+    <head>
+    <meta charset="ISO-8859-1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+          <link rel="stylesheet" type="text/css" href="../../css/layout.css" />
+        <title>Register PhuCapNV</title>
+    </head>
+    <body>
+      <article layout:fragment="content" >
+        <div class="container" style="margin-top: 10px;">
+            <div class="row" style="border: 1px darkgrey solid; border-radius: 10px;width: 50%; margin: 0 50px; padding: 20px;" >
+                <div class="col-sm-12">
+        <h2>Register PhuCapNV</h2>
+         
+          <form th:action="${action}"  th:object=${PhuCap} method="post" >
+            <div class="form-group">
+                      
+                            <label>Id</label>
+                            <input type="hidden"  th:field="*{id}" class="form-control" name="id" value="" placeholder="Enter id">
+                        </div>
+                        
+                       
+                        <div class="form-group">
+                            <label>ten PhuCap </label>
+                             <input type="text"  th:field="*{tenphucap}" class="form-control" name="tenphucap" value="" placeholder="Enter tenphucap">
+                        </div>
+							 <div class="form-group">
+                            <label>sotien PhuCap</label>
+                             <input type="text"  th:field="*{sotien}" class="form-control" name="sotien" value="" placeholder="Enter sotien">
+                        </div>
+                           <div class="form-group">
+                         <label> chucvu </label>
+                       <select th:field="*{idchucvu}" class="form-control" id="categorieid" name="idchucvu">
+							<option th:each="depart:${chucvu}"  th:value="${depart.id}"  th:text="${depart.tencv}">  </option>
+						   </select>
+                        </div>
+                         
+                         
+					
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-danger btn-sm">Cancel</button>
+                        <a href="/PhuCap/page" class="btn btn-primary">Display PhuCap</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </article>
+    </body>
+</html>

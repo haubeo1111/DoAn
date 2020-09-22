@@ -1,0 +1,138 @@
+@charset "ISO-8859-1";
+
+.title{
+    text-align: center;
+    color: black;
+    padding:3px 0; 
+    text-transform: uppercase;
+}
+.col-33{
+    width: 32%;
+    height: 200px;
+    background-color:  coral;
+    border: 1px solid  gray;
+    float: left;
+    margin-left: 5px;
+    margin-bottom: 3px; 
+    margin-top: 3px;
+    border-radius: 3px;
+    box-shadow: 2px 2px gray;
+}
+.col-33 >img{
+
+    width: 190px;
+    height: 180px;
+    margin: 12px;
+}
+.clear{
+    clear:  both;
+}
+.boox-menu-top{
+    background-color:  red;
+    position: absolute;
+    top: 0;
+    right:0px ;
+    width: 100px;
+    height: 100px;
+    border-bottom-left-radius: 20px;
+    z-index: 2;
+}
+.boox-menu-top-ul{
+    list-style-type: none;
+    display: inline-block;
+    margin :0;
+   
+    line-height: 60px;
+}
+.boox-menu-top -li{
+    float:left;
+    width: 100px;
+}
+.boox-menu-top -li-a{
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+.boox-menu-top -li-a:hover{
+    color:blue;
+    text-decoration: underline;
+}
+.sanpham{
+    width: 32%;
+    height:250px;
+    border:1px solid black;
+    background-color: blue;
+    box-shadow: 3px 2px antiquewhite;
+    border-radius: 10px;
+    margin:10px 3px;
+    float:left;
+    position: relative;
+}
+.sanpham h3{
+    color :red;
+    margin:5px 0;
+    text-align: center;
+    border-bottom: 1px solid black;
+
+}
+.sanpham .price{
+    font-size: 28px;
+    font-weight: 600;
+    color:orange;
+    position: absolute;
+    left:5px;
+    bottom: 15px;
+}
+.sanpham .icons{
+    width: 25px;
+    height: 80px;
+    right:5px;
+    bottom: 5px;
+    position: absolute;
+}
+.sanpham .images{
+    width: 200px;
+    height:200px;
+}
+
+.sanpham .new-img{
+
+    position: absolute;
+    right: 0px;
+    top:0px;
+}
+.sanpham .new-img img{
+    width: 85px;
+}
+#vmenu{
+   border :1px solid gray;
+ padding:10px;
+ box-shadow: 3px 2px gray;
+    margin: 3px;
+}
+#vmenu ul{
+    list-style-type: none;
+    padding: 0; 
+}
+#vmenu> ul >li{
+    line-height: 30px;
+    border-bottom: 1px  dotted azure;
+    padding: 0; 
+}
+#vmenu> ul >li a{
+    font-size: 12px;
+    text-decoration: none;
+    line-height: 15px;
+    background: url(../images/Add.png) no-repeat ;
+    padding: 5px 5px 8px 30px;
+    
+}
+#vmenu> ul >li a:hover{
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 20px;
+    background: url(../images/Add.png)  no-repeat  ;
+    padding: 5px 5px 8px 30px;
+    
+}

@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{layout/main-layout1}" >
+    <head>
+    <meta charset="ISO-8859-1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+          <link rel="stylesheet" type="text/css" href="../../css/layout.css" />
+        <title>Register KhuyenMai</title>
+    </head>
+    <body>
+      <article layout:fragment="content" >
+        <div class="container" style="margin-top: 10px;">
+            <div class="row" style="border: 1px darkgrey solid; border-radius: 10px;width: 50%; margin: 0 50px; padding: 20px;" >
+                <div class="col-sm-12">
+        <h2>Register KhuyenMai</h2>
+         
+          <form th:action="${action}"  th:object=${KhuyenMai} method="post" >
+           <div class="form-group">
+                      
+                            <label>Id</label>
+                            <input type="hidden"  th:field="*{id}" class="form-control" name="id" value="" placeholder="Enter id">
+                        </div>
+                         
+                         <div class="form-group">
+                      
+                            <label>Ma khuyen mai</label>
+                            <input type="text"  th:field="*{makm}" class="form-control" name="makm" value="" placeholder="Enter makm">
+                        </div>
+                        <div class="form-group">
+                      
+                            <label>ma loai dt</label>
+                            <select th:field="*{maloaidt}" class="form-control" id="categorieid" name="maloaidt">
+							<option  th:each="depart:${loaidt}" th:value="${depart.maloaidt}" th:text="${depart.tenloaidt}"></option>
+							
+						</select>
+                        </div>
+                        <div class="form-group">
+                            <label>thoi ten khuyen mai:</label>
+                            <input type="text"  th:field="*{tenkm}" class="form-control" name="tenkm" value="" placeholder="Enter ten KhuyenMai">
+                        <p>thang</p>
+                        </div>
+                        <div class="form-group">
+                            <label>ngay bat dau:</label>
+                            <input type="text"  th:field="*{ngaybatdau}" class="form-control" name="ngaybatdau" value="" placeholder="Enter ngay bat dau">
+                        </div>
+                        <div class="form-group">
+                            <label>ngay ket thuc:</label>
+                            <input type="text"  th:field="*{ngayketthuc}" class="form-control" name="ngayketthuc" value="" placeholder="Enter ngay ket thuc">
+                        </div>
+							<div class="form-group">
+                            <label>Loai KM</label>
+                           <select th:field="*{maloaikm}" class="form-control"  name="maloaikm">
+							<option  th:each="depart:${loaiKM}" th:value="${depart.makm}" th:text="${depart.phantram}+'%'"></option>
+							
+						</select>
+                        </div>
+                        
+                        
+                        
+					
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-danger btn-sm">Cancel</button>
+                        <a href="/KhuyenMai/page" class="btn btn-primary">Display NhanVien</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </article>
+    </body>
+</html>

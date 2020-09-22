@@ -1,0 +1,500 @@
+@charset "ISO-8859-1";
+
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 21, 2019, 2:39:20 PM
+    Author     : haubeo
+*/
+
+
+
+
+
+#wrapper{
+    width:1200px;
+    height: auto;
+   margin: 0 auto;
+
+ 
+}
+
+
+
+
+header{
+    width:100%;
+    height:auto; 
+    background-color:bisque;
+    position: relative;
+}
+header .logo{
+	position: absolute;
+	top:0px;
+	left:0px;
+	width: 100px;
+	height: 100px;
+}
+header input{
+	position: absolute;
+	top:0px;
+	left:150px;
+	width: 150px;
+}
+
+
+
+nav{
+    width:100%;
+    height :60px;  
+    background-color:white;
+    margin-top: 0px;
+}
+
+#main-content{
+    width: 100%;
+    height:auto;
+  
+}
+article{
+    width:100%;
+    height:auto; 
+    background-color:#ffffff;
+  
+   float:left;
+   margin: 20px; 
+}
+article .ii h3{
+	
+	
+}
+
+article .ii{
+	width: 55%;
+	heihgt:auto;
+	 float:left;
+}
+
+article .ii img{
+	
+	 top:30px;
+	 margin: 30px;
+}
+article .kk{
+	width:44%; 
+	height: auto;
+	 float:left;
+	 
+	margin:15px;
+}
+article .kk .gg{
+	broder:1px solid green;
+	width:50%;
+	height: auto;
+	text-align: center;
+}
+article .kk .gg .tt{
+	margin:80px 0;
+	
+} 
+article .kk .llk{
+	
+	width: 100%;
+	height: auto;
+	font-family:25px;
+}
+article .kk  .icon1{
+	
+	width:100px;
+	height: 20px;
+	background-color: orange;
+	color:white;
+	position: absolute;
+	left:150px;
+	top:0px;
+}
+table,th,td{
+    border: 1px solid pink;  
+    border-collapse: collapse; 
+    
+	
+}
+  
+ th ,td {  
+
+     padding: 10px;  
+}  
+ 
+aside{
+    width: 30%;
+    height: auto;  
+   position:relative;
+    float: left;
+   
+}
+aside p label{
+	width: 50%;
+	 border: 1px solid pink; 
+	  height:auto; 
+	margin:70px 10px;
+	padding:10px;
+	
+	position:absolute;
+	  left:30px;
+	  
+}
+aside p label:hover{
+	color:aqua;
+}
+aside h3{
+	position:absolute;
+	 left:30px;
+	 margin:30px 10px;
+	 width: 50%;
+	 border: 1px solid pink; 
+	  height:auto; 
+	  color:green;
+}
+aside p{
+	
+	
+	 height: 60px; 
+	
+}
+aside p img{
+	width: 60px;
+	height: 60px;
+	margin:5px;
+}
+footer{
+       width: 100%;
+    height: auto;
+
+    background-color: red;
+    text-align: center;
+   
+}
+.not{
+	
+	 background-color:#0000ff;
+	color:white;
+	text-align:center;
+	font-style:normal;
+	font-family:serif;
+	boder:1px;
+	weight:20px;
+	height:20px;
+	 border-top-left-radius:1px;
+       border-top-right-radius:1px;
+       border-bottom-left-radius:1px;
+        border-bottom-right-radius:1px;
+        padding:3px;
+        box-shadow:2px 2px  2px #0000ff;
+         text-transform: uppercase;
+}
+.not1{
+	
+	 background-color:red;
+	color:white;
+	text-align:center;
+	font-style:none;
+	boder:1px;
+	weight:20px;
+	height:20px;
+	 border-top-left-radius:1px;
+       border-top-right-radius:1px;
+       border-bottom-left-radius:1px;
+        border-bottom-right-radius:1px;
+        padding:3px;
+        box-shadow:1px 1px #0000ff;
+         text-transform: uppercase;
+}
+.title{
+    text-align: center;
+    color: black;
+    padding:3px 0; 
+   
+    text-transform: uppercase;
+}
+header img{
+	width: 100%;
+	height: 200px;
+}
+.col-33{
+    width: 32%;
+    height: 200px;
+    background-color:  coral;
+    border: 1px solid  gray;
+    float: left;
+    margin-left: 5px;
+    margin-bottom: 3px; 
+    margin-top: 3px;
+    border-radius: 3px;
+    box-shadow: 2px 2px gray;
+}
+.col-33 >img{
+
+    width: 190px;
+    height: 180px;
+    margin: 12px;
+}
+.clear{
+    clear:  both;
+}
+.boox-menu-top{
+    background-color: green;
+    position: absolute;
+    top: 0;
+    right:0px ;
+    width: 100px;
+    height: 100px;
+    border-bottom-left-radius: 20px;
+    z-index: 2;
+}
+.boox-menu-top-ul{
+    list-style-type: none;
+    display: inline-block;
+    margin :0;
+   
+    line-height: 60px;
+}
+.boox-menu-top -li{
+    float:left;
+    width: 100px;
+}
+.boox-menu-top -li-a{
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+.boox-menu-top -li-a:hover{
+    color:blue;
+    text-decoration: underline;
+}
+.sanpham{
+    width: 32%;
+    height:300px;
+    border:1px solid black;
+    
+    box-shadow: 3px 2px antiquewhite;
+    border-radius: 10px;
+    margin:20px 3px;
+    float:left;
+    position: relative;
+}
+.sanpham h4{
+   
+   
+    text-align: center;
+   position: absolute;
+   top:180px;
+    left:5px;
+}
+.sanpham h4:hover{
+	color:blue;
+}
+.sanpham p{
+	 position: absolute;
+	  left:5px;
+    bottom:20px;
+}
+.sanpham .price{
+    font-size: 18px;
+    font-weight: 600;
+    color:red;
+    position: absolute;
+    left:5px;
+    bottom: 50px;
+}
+.sanpham .icons{
+    width:100px;
+   height:20px;
+    left:5px;
+    top: 150px;
+    position: absolute;
+    background-color: orange;
+    color:white;
+}
+.sanpham .images{
+    width: 150px;
+    height:150px;
+    margin: 10px 30px;
+     position: absolute;
+     left:30px;
+}
+.sanpham .images:hover{
+	top:-8px;
+}
+.sanpham .image:hover{
+	 animation-name:move_right;
+            animation-duration:1s;
+            animation-iteration-count:1;
+            
+	}
+ @keyframes move_right{
+            0%{top:2 px;}
+           
+            100%{top:-5px;}
+        }
+.sanpham .new-img{
+
+    position: absolute;
+    right: 0px;
+    top:0px;
+}
+.sanpham .new-img img{
+    width: 85px;
+}
+nav > ul{
+    list-style-type: none;
+    text-align: center;
+    padding:  0;
+ 
+    width: 100%;
+    height:60px;
+   margin-top:-3px;
+    
+}
+nav > ul > li{
+    display: inline-block;
+  background-color:green;
+    width: 16%;
+     line-height:50px;
+      border-top-left-radius:10px;
+       border-top-right-radius:10px;
+       border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px;
+}
+nav > ul > li >a{
+  color:  red;
+    text-decoration: none;
+}
+nav > ul > li >a:hover{
+  background-color:  blanchedalmond;
+
+}
+nav img{
+	width:100%;
+	
+}
+header > ul{
+    list-style-type: none;
+    text-align: center;
+    padding:  0;
+ position:absolute;
+    width: 80%;
+    height:60px;
+   margin-top:-3px;
+   top:0px;
+   left:300px;
+    
+}
+header > ul > li{
+    display: inline-block;
+  background-color:green;
+    width: 16%;
+     line-height:50px;
+      border-top-left-radius:10px;
+       border-top-right-radius:10px;
+       border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px;
+}
+header > ul > li >a{
+  color:  red;
+    text-decoration: none;
+}
+header > ul > li >a:hover{
+  background-color:  blanchedalmond;
+
+}
+#vmenu{
+   border :1px solid gray;
+ padding:10px;
+ box-shadow: 3px 2px gray;
+    margin: 3px;
+}
+#vmenu ul{
+    list-style-type: none;
+    padding: 0; 
+}
+#vmenu > ul >li{
+    line-height: 30px;
+    border-bottom: 1px  dotted azure;
+    padding: 0; 
+}
+#vmenu > ul >li a{
+    font-size: 12px;
+    text-decoration: none;
+    line-height: 15px;
+    background: url(../images/Add.png) no-repeat ;
+    padding: 5px 5px 8px 30px;
+    
+}
+#vmenu > ul >li a:hover{
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 20px;
+    background: url(../images/Add.png)  no-repeat  ;
+    padding: 5px 5px 8px 30px;
+    
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 12, 2019, 2:50:07 PM
+    Author     : haubeo
+*/
+.form-control1{
+    padding:5px;
+    margin:3px 0;
+    width:100px;
+    border-radius: 3px;
+    border:none;
+    box-shadow: 0 0 3px aquamarine;
+    color : coral;
+    display: block;
+    outline :none;
+    
+}
+.form-control1:focus{
+    box-shadow: 0 0 3px blue; 
+} 
+.form-group1{
+  margin :10px 20 px;
+  font-size: 20px;
+}
+.btn{
+    padding:5px;
+    border-radius: 3px;
+    border:1px solid activecaption;
+    color: azure;
+    background-color:  blue;
+}
+.btnd{
+    padding:5px;
+    border-radius: 3px;
+    border:1px solid activecaption;
+    color: azure;
+    background-color:red;
+}
+.ll{
+   border: 2px solid aliceblue;
+  margin: 10px 300px 50px 300px;
+  padding: 30px;
+  border-radius: 10px;
+}
+.gh{
+    width: 500px;
+    height: 100px;
+    border: 1px solid activecaption;
+    
+}
+
